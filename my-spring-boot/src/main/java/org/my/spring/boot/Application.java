@@ -34,7 +34,7 @@ public class Application extends FatJarRouter {
     @Override
     public void configure() throws Exception {
         from("timer://foo?period=5000")
-            .setBody().constant("Hello World from Grenoble!")
+            .setBody().constant("Hello World from Grenoble! using s2i Eclipse Openshift UI")
             .log(">>> ${body}");
     }
 }
